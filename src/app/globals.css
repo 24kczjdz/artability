@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #f7f4ef;
+  --sand-50: #fbf8f3;
+  --sand-100: #efe8dc;
+  --ink: #1f2a37;
+  --ink-muted: #5b6675;
+  --indigo-warm: #3d5a80;
+  --indigo-deep: #2b4060;
+  --amber-soft: #f0a04b;
+  --amber-deep: #c77820;
+  --teal-calm: #2f6b5a;
+  --teal-deep: #1f4d41;
+  --background: var(--canvas);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-canvas: var(--canvas);
+  --color-sand-50: var(--sand-50);
+  --color-sand-100: var(--sand-100);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-indigo-warm: var(--indigo-warm);
+  --color-indigo-deep: var(--indigo-deep);
+  --color-amber-soft: var(--amber-soft);
+  --color-amber-deep: var(--amber-deep);
+  --color-teal-calm: var(--teal-calm);
+  --color-teal-deep: var(--teal-deep);
+  --font-sans: var(--font-lexend);
+  --font-display: var(--font-nunito);
+}
+
+@layer base {
+  * {
+    border-color: color-mix(in oklab, var(--indigo-warm) 18%, transparent);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--indigo-warm);
+    outline-offset: 2px;
+  }
+}
+
+@utility bg-hero-wash {
+  background:
+    linear-gradient(
+      165deg,
+      #fff8ef 0%,
+      #f3efe6 38%,
+      #e7f0ec 72%,
+      #e8eef5 100%
+    );
+}
+
+@utility font-display {
+  font-family: var(--font-nunito), var(--font-lexend), ui-sans-serif, sans-serif;
+}
