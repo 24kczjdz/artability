@@ -5,32 +5,29 @@ import { useRouter } from "next/navigation";
 import { usePortalMode } from "@/context/portal-mode";
 import { useToast } from "@/components/ui/toast";
 
-/** Register / verify is for Artist & Parent portal only. */
+/** Register / verify is for Artist & Parent portal (or undecided public). */
 export function StudentAccessGuard({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const router = useRouter();
-  const { ready, hasChosen, isStudent, isBuyer } = usePortalMode();
+  const { ready, isBuyer } = usePortalMode();
   const { toast } = useToast();
   const redirected = useRef(false);
 
   useEffect(() => {
     if (!ready || redirected.current) return;
-    if (!hasChosen) {
-      redirected.current = true;
-      router.replace("/");
-      return;
-    }
     if (isBuyer) {
       redirected.current = true;
-      toast("Registration is for Artist / Parent accounts. Opening the marketplace.");
+      toast(
+        "Registration is for Artist / Parent accounts. Opening the marketplace.",
+      );
       router.replace("/marketplace");
     }
-  }, [hasChosen, isBuyer, ready, router, toast]);
+  }, [isBuyer, ready, router, toast]);
 
-  if (!ready || !hasChosen || !isStudent) {
+  if (!ready || isBuyer) {
     return (
       <div className="mx-auto max-w-lg px-4 py-20 text-center text-ink-muted">
         Checking portal access…

@@ -207,6 +207,11 @@ export default function MarketplacePage() {
               {art.verifiedAsdCreator ? (
                 <Badge>Verified ASD Creator</Badge>
               ) : null}
+              {art.featuredOnBus ? (
+                <Badge className="ml-2 bg-teal/15 text-teal-deep">
+                  On Painting Bus
+                </Badge>
+              ) : null}
               <h2 className="mt-3 text-lg font-bold text-ink">
                 <Link
                   href={`/marketplace/${art.slug}`}

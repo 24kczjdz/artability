@@ -16,6 +16,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(145deg, #F6C177 0%, #E07A5F 40%, #3D5A80 100%)",
     tags: ["watercolor", "emotion", "rainbow"],
     socialChannels: ["instagram", "xiaohongshu"],
+    featuredOnBus: true,
   },
   {
     id: "art-quiet-ocean",
@@ -32,6 +33,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(160deg, #A8DADC 0%, #457B9D 55%, #1D3557 100%)",
     tags: ["calm", "nature", "print"],
     socialChannels: ["instagram", "tiktok"],
+    featuredOnBus: true,
   },
   {
     id: "art-circle-friends",
@@ -48,6 +50,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(135deg, #F4A261 0%, #E9C46A 45%, #2A9D8F 100%)",
     tags: ["shapes", "family", "digital"],
     socialChannels: ["xiaohongshu", "tiktok"],
+    featuredOnBus: false,
   },
   {
     id: "art-texture-garden",
@@ -64,6 +67,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(150deg, #DAD7CD 0%, #A3B18A 40%, #588157 100%)",
     tags: ["tactile", "collage", "garden"],
     socialChannels: ["instagram"],
+    featuredOnBus: true,
   },
   {
     id: "art-starlight-paths",
@@ -80,6 +84,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(165deg, #1B263B 0%, #415A77 50%, #E0E1DD 100%)",
     tags: ["night", "abstract", "csr"],
     socialChannels: ["instagram", "tiktok", "xiaohongshu"],
+    featuredOnBus: true,
   },
   {
     id: "art-sunny-squares",
@@ -96,6 +101,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(140deg, #FFE8A3 0%, #F4A261 50%, #E76F51 100%)",
     tags: ["pattern", "warm", "playful"],
     socialChannels: ["xiaohongshu"],
+    featuredOnBus: false,
   },
   {
     id: "art-forest-whispers",
@@ -112,6 +118,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(155deg, #CAD2C5 0%, #84A98C 35%, #354F52 100%)",
     tags: ["landscape", "emotion", "framed"],
     socialChannels: ["instagram", "tiktok"],
+    featuredOnBus: true,
   },
   {
     id: "art-hello-hands",
@@ -128,6 +135,7 @@ export const artworks: Artwork[] = [
     imageGradient: "linear-gradient(145deg, #FFB4A2 0%, #E5989B 40%, #B5838D 100%)",
     tags: ["handprint", "family", "early"],
     socialChannels: ["xiaohongshu", "instagram"],
+    featuredOnBus: false,
   },
 ];
 

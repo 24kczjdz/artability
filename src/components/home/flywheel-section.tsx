@@ -10,7 +10,7 @@ export function FlywheelSection() {
     <section className="relative overflow-hidden border-t border-indigo-warm/10 bg-gradient-to-b from-sand-50 to-canvas">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-indigo-deep sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-violet-deep sm:text-4xl">
             From register to revenue
           </h2>
           <p className="mt-3 text-base leading-relaxed text-ink-muted sm:text-lg">
@@ -42,12 +42,12 @@ export function FlywheelSection() {
         </ol>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href="/register" variant="teal">
-            Start with Register & Verify
+          <ButtonLink href="/bus-gallery" variant="teal">
+            Meet the Painting Bus
             <ArrowRight aria-hidden />
           </ButtonLink>
-          <ButtonLink href="/marketplace" variant="outline">
-            Browse Marketplace
+          <ButtonLink href="/register" variant="outline">
+            Start with Register & Verify
           </ButtonLink>
         </div>
       </div>

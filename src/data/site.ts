@@ -5,11 +5,15 @@ export const siteConfig = {
   tagline: "Unlocking Creative Futures for Special Needs Artists",
   description:
     "Personalized AI-powered art education meets a self-sustaining marketplace. Empowering children with Autism to Learn, Create, Earn, and Sustain.",
+  busName: "Painting Bus",
+  busTagline: "Speak with Arts, Walk with Stars",
   nav: [
-    { href: "/home", label: "Home" },
-    { href: "/register", label: "Register" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
     { href: "/learn", label: "Learn" },
     { href: "/marketplace", label: "Marketplace" },
+    { href: "/bus-gallery", label: "Bus Gallery" },
+    { href: "/contact", label: "Contact Us" },
   ],
 } as const;
 
@@ -70,9 +74,9 @@ export const flywheelSteps: FlywheelStep[] = [
   {
     id: "flywheel-6",
     stepNumber: 6,
-    title: "Marketplace",
+    title: "Marketplace & Painting Bus",
     description:
-      "List as Physical Artwork or Digital Artwork, amplified via Instagram, TikTok, and 小红书.",
+      "Sell online or exhibit on the Painting Bus — Physical, Digital, and merchandise options.",
   },
   {
     id: "flywheel-7",

@@ -35,7 +35,7 @@ export type CourseTrack =
 
 export type ArtworkCategory = "physical" | "digital";
 
-export type PurchaseOption = "physical" | "digital";
+export type PurchaseOption = "physical" | "merchandise" | "digital";
 
 export type PortalMode = "student" | "buyer";
 
@@ -129,6 +129,8 @@ export interface Artwork {
   imageGradient: string;
   tags: string[];
   socialChannels: ("instagram" | "tiktok" | "xiaohongshu")[];
+  /** Featured on the physical Painting Bus / Art on the Move inventory */
+  featuredOnBus: boolean;
 }
 
 export interface IncomeShare {
@@ -148,6 +150,43 @@ export interface SiteStat {
   id: string;
   value: string;
   label: string;
+}
+
+export interface BusFlowStep {
+  id: string;
+  stepNumber: number;
+  title: string;
+  description: string;
+}
+
+export interface BusStop {
+  id: string;
+  venue: string;
+  city: string;
+  date: string;
+  status: "upcoming" | "invite-open" | "completed";
+}
+
+export type PhotoWallCategory =
+  | "all"
+  | "senses"
+  | "creating"
+  | "exhibition"
+  | "community";
+
+export interface PhotoWallItem {
+  id: string;
+  src: string;
+  alt: string;
+  category: Exclude<PhotoWallCategory, "all">;
+  tag: string;
+  location: string;
+  date: string;
+  caption: string;
+  likes: number;
+  span?: "tall" | "wide" | "normal";
+  /** Optional Five Senses label, e.g. Sound, Touch, Sight */
+  sense?: "sound" | "touch" | "sight" | "smell" | "taste";
 }
 
 export interface AiProfileSuggestion {

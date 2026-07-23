@@ -50,6 +50,9 @@ function LearnPageContent() {
             <Sparkles aria-hidden />
             Open AI Lesson Demo
           </ButtonLink>
+          <ButtonLink href="/portal" variant="teal">
+            Upload finished artwork
+          </ButtonLink>
         </div>
       </div>
 

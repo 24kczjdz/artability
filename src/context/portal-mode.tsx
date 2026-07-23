@@ -29,7 +29,7 @@ const PortalModeContext = createContext<PortalModeContextValue | null>(null);
 
 const modeLabels: Record<PortalMode, string> = {
   student: "Artist / Parent Portal",
-  buyer: "Buyer / Public Portal",
+  buyer: "Buyer / CSR Mode",
 };
 
 export function PortalModeProvider({ children }: { children: ReactNode }) {
@@ -76,7 +76,7 @@ export function PortalModeProvider({ children }: { children: ReactNode }) {
       isStudent: mode === "student",
       isBuyer: mode === "buyer",
       label: mode ? modeLabels[mode] : "Choose identity",
-      canAccessLearn: mode === "student",
+      canAccessLearn: mode !== "buyer",
     }),
     [clearMode, mode, ready, setMode],
   );

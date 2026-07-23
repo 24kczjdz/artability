@@ -19,7 +19,7 @@ export function StatsBanner() {
             transition={{ delay: index * 0.08, duration: 0.35 }}
             className="text-center sm:text-left"
           >
-            <p className="font-display text-3xl font-extrabold tracking-tight text-indigo-deep">
+            <p className="font-display text-3xl font-extrabold tracking-tight text-violet-deep">
               {stat.value}
             </p>
             <p className="mt-1 text-sm font-medium text-ink-muted">

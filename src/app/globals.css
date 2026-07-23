@@ -1,17 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #f7f4ef;
-  --sand-50: #fbf8f3;
-  --sand-100: #efe8dc;
-  --ink: #1f2a37;
-  --ink-muted: #5b6675;
-  --indigo-warm: #3d5a80;
-  --indigo-deep: #2b4060;
-  --amber-soft: #f0a04b;
-  --amber-deep: #c77820;
-  --teal-calm: #2f6b5a;
-  --teal-deep: #1f4d41;
+  --canvas: #ffffff;
+  --sand-50: #fff9f5;
+  --sand-100: #fef3e8;
+  --pastel-lilac: #f5f3ff;
+  --pastel-mint: #f0fdfa;
+  --pastel-peach: #fff7ed;
+  --ink: #1e293b;
+  --ink-muted: #64748b;
+  --violet: #8b5cf6;
+  --violet-deep: #7c3aed;
+  --sunflower: #f59e0b;
+  --sunflower-deep: #d97706;
+  --teal: #0d9488;
+  --teal-deep: #0f766e;
+  --coral: #ff6b6b;
+  --coral-deep: #ef4444;
+  --indigo-warm: #8b5cf6;
+  --indigo-deep: #6d28d9;
+  --amber-soft: #f59e0b;
+  --amber-deep: #d97706;
+  --teal-calm: #0d9488;
+  --teal-deep-legacy: #0f766e;
   --background: var(--canvas);
   --foreground: var(--ink);
 }
@@ -22,21 +33,31 @@
   --color-canvas: var(--canvas);
   --color-sand-50: var(--sand-50);
   --color-sand-100: var(--sand-100);
+  --color-pastel-lilac: var(--pastel-lilac);
+  --color-pastel-mint: var(--pastel-mint);
+  --color-pastel-peach: var(--pastel-peach);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
+  --color-violet: var(--violet);
+  --color-violet-deep: var(--violet-deep);
+  --color-sunflower: var(--sunflower);
+  --color-sunflower-deep: var(--sunflower-deep);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-coral: var(--coral);
+  --color-coral-deep: var(--coral-deep);
   --color-indigo-warm: var(--indigo-warm);
   --color-indigo-deep: var(--indigo-deep);
   --color-amber-soft: var(--amber-soft);
   --color-amber-deep: var(--amber-deep);
   --color-teal-calm: var(--teal-calm);
-  --color-teal-deep: var(--teal-deep);
   --font-sans: var(--font-lexend);
   --font-display: var(--font-nunito);
 }
 
 @layer base {
   * {
-    border-color: color-mix(in oklab, var(--indigo-warm) 18%, transparent);
+    border-color: color-mix(in oklab, var(--violet) 16%, transparent);
   }
 
   html {
@@ -50,7 +71,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--indigo-warm);
+    outline: 2px solid var(--violet);
     outline-offset: 2px;
   }
 }
@@ -59,10 +80,10 @@
   background:
     linear-gradient(
       165deg,
-      #fff8ef 0%,
-      #f3efe6 38%,
-      #e7f0ec 72%,
-      #e8eef5 100%
+      #ffffff 0%,
+      #fff7ed 28%,
+      #f5f3ff 62%,
+      #f0fdfa 100%
     );
 }
 
