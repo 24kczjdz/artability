@@ -32,7 +32,7 @@ function PortalPageContent() {
     {
       id: "sub-1",
       title: "Sunny Squares Study",
-      artistName: "Ellie",
+      artistName: "Ellie Tanaka",
       fileName: "sunny-squares.jpg",
       story: "Warm yellow blocks after color lesson 2.",
       status: "approved",

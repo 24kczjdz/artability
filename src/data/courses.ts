@@ -7,6 +7,7 @@ import type {
   CourseTrack,
   CourseTrackMeta,
   CreatorIdentityOption,
+  DemoLessonSample,
   DemoStep,
   SpectrumFocus,
   SpectrumFocusOption,
@@ -160,8 +161,8 @@ export const courses: Course[] = [
     skills: ["Color naming", "Emotion matching", "Choice making"],
     personalizedNote: "Starts with 3 colors; AI expands the palette as confidence grows.",
     colorAccent: "#F0A04B",
-    coverImage: "https://images.unsplash.com/photo-1513364776015-b4bf9908c39c?auto=format&fit=crop&w=900&q=80",
-    coverAlt: "Bright paint tubes and colorful art supplies",
+    coverImage: "/learn/primary-colors-art.jpg",
+    coverAlt: "Family coloring with a child beside the Roving Art Truck",
   },
   {
     id: "course-warm-cool",
@@ -297,31 +298,74 @@ export const demoLessonSteps: DemoStep[] = [
   {
     id: "demo-step-1",
     stepNumber: 1,
-    title: "Primary Colors",
+    title: "Meet the Primary Colors",
     instruction:
-      "Look at red, blue, and yellow. Tap the color that feels warm like sunshine.",
-    audioPrompt: "Let's start with primary colors. Can you find the warm yellow?",
+      "Look at red, blue, and yellow — the three primary colors. Point to each one on the picture.",
+    audioPrompt:
+      "Let's meet the primary colors. Look at red, blue, and yellow. Point to each one.",
+    imageUrl: "/learn/primary-colors-art.jpg",
+    imageAlt: "Child coloring at a table with family beside the colorful Roving Art Truck",
   },
   {
     id: "demo-step-2",
     stepNumber: 2,
-    title: "Mix Blue & Yellow",
+    title: "Find Warm Yellow",
     instruction:
-      "Drag blue onto yellow. Watch them become green — the color of leaves and grass.",
-    audioPrompt: "Now mix blue and yellow together. Great mixing makes green!",
+      "Yellow feels warm like sunshine. Look at this yellow paint — tap it in your mind, then find yellow on your paper or palette.",
+    audioPrompt:
+      "Yellow feels warm like sunshine. Look at this yellow. Can you find yellow on your paper?",
+    imageUrl:
+      "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1000&q=80",
+    imageAlt: "Yellow and warm watercolor pigments on a palette",
   },
   {
     id: "demo-step-3",
     stepNumber: 3,
-    title: "Draw a Sun",
+    title: "Meet Cool Blue",
     instruction:
-      "Use your warm yellow to draw a big sun in the sky. Take your time — there is no rush.",
-    audioPrompt: "Draw a big sun with warm yellow. You are doing wonderful work.",
+      "Blue feels cool like the sky or ocean. Look at this blue, then find blue among your paints.",
+    audioPrompt:
+      "Blue feels cool like the sky. Look at this blue color. Find blue on your palette.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1000&q=80",
+    imageAlt: "Soft blue paint and brushes for cool color practice",
+  },
+  {
+    id: "demo-step-4",
+    stepNumber: 4,
+    title: "Mix Blue & Yellow",
+    instruction:
+      "Gently mix a little blue into yellow. Watch them become green — the color of leaves and grass.",
+    audioPrompt:
+      "Now mix blue and yellow together. Great mixing makes green, like leaves and grass.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1000&q=80",
+    imageAlt: "Green and nature-inspired paint colors from mixing",
+  },
+  {
+    id: "demo-step-5",
+    stepNumber: 5,
+    title: "Draw a Warm Sun",
+    instruction:
+      "Use your warm yellow to draw a big sun. Add soft orange or red rays if you like. Take your time — there is no rush.",
+    audioPrompt:
+      "Draw a big sun with warm yellow. You can add orange rays. You are doing wonderful work.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?auto=format&fit=crop&w=1000&q=80",
+    imageAlt: "Bright sun in a warm sky as painting inspiration",
   },
 ];
 
+export const demoLessonSample: DemoLessonSample = {
+  imageUrl:
+    "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1200&q=80",
+  imageAlt: "Finished warm-and-cool abstract painting sample for the lesson",
+  caption:
+    "Sample finished piece — a warm sun glowing over cool sky and green ground. Yours can look different and still be wonderful!",
+};
+
 export const demoAiFeedback =
-  "Great job using warm colors! Your sun feels bright and friendly. Ready for the next step whenever you are.";
+  "Great job using warm colors! Your sun feels bright and friendly. Ready for the next adventure whenever you are.";
 
 export function getTrackMeta(track: CourseTrack): CourseTrackMeta {
   return courseTracks.find((item) => item.id === track) ?? courseTracks[0];

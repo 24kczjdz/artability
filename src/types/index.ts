@@ -113,6 +113,14 @@ export interface DemoStep {
   title: string;
   instruction: string;
   audioPrompt: string;
+  imageUrl: string;
+  imageAlt: string;
+}
+
+export interface DemoLessonSample {
+  imageUrl: string;
+  imageAlt: string;
+  caption: string;
 }
 
 export interface Artwork {

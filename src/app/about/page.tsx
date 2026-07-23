@@ -20,12 +20,6 @@ function TeamMemberCard({
 }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
-  const initials = member.name
-    .split(" ")
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
 
   return (
     <motion.article
@@ -46,17 +40,8 @@ function TeamMemberCard({
             priority={index === 0}
           />
         ) : (
-          <div
-            className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-pastel-lilac via-white to-pastel-mint"
-            role="img"
-            aria-label={member.imageAlt}
-          >
-            <span className="font-display text-4xl font-bold text-violet-deep">
-              {initials}
-            </span>
-            <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink-muted">
-              Photo coming soon
-            </span>
+          <div className="flex h-full w-full items-center justify-center bg-pastel-lilac/60 text-sm font-semibold text-ink-muted">
+            Photo coming soon
           </div>
         )}
       </div>

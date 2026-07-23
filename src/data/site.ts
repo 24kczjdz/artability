@@ -113,7 +113,7 @@ export const teamMembers = [
     name: "Vicky Wang Li Jia",
     role: "Software Engineer",
     focus: "Our Solution · Presentation 3 & 4",
-    bio: "Eng Computer Science student at The University of Hong Kong and Software Engineer at Arts Tech Lab (Faculty of Arts, HKU). Builds the ArtAbility platform and presents our product solution — learning, marketplace, and Painting Bus in one experience.",
+    bio: "Computer Science student at The University of Hong Kong and Software Engineer at Arts Tech Lab (Faculty of Arts, HKU). Builds the ArtAbility platform and presents our product solution — learning, marketplace, and Painting Bus in one experience.",
     imageSrc: "/team/vicky-wang-li-jia.png",
     imageAlt: "Portrait of Vicky Wang Li Jia, Software Engineer at ArtAbility",
     titles: [] as string[],
@@ -144,8 +144,8 @@ export const teamMembers = [
     role: "Video Creator",
     focus: "POC · Intro Video · AI Lesson Video",
     bio: "Partners on POC video production — introduction film and AI lesson demos for the ArtAbility story.",
-    imageSrc: null,
-    imageAlt: "Photo coming soon for Kevin",
+    imageSrc: "/team/kevin.jpg",
+    imageAlt: "Portrait of Kevin, Video Creator at ArtAbility",
     titles: [] as string[],
   },
   {
@@ -174,8 +174,8 @@ export const teamMembers = [
     role: "Business & Finance",
     focus: "Business Model · Financial Feasibility",
     bio: "Shapes the business model and financial feasibility so ArtAbility can sustain creator income.",
-    imageSrc: null,
-    imageAlt: "Photo coming soon for Jerry",
+    imageSrc: "/team/jerry.jpg",
+    imageAlt: "Portrait of Jerry, Business & Finance at ArtAbility",
     titles: [] as string[],
   },
   {
@@ -188,4 +188,13 @@ export const teamMembers = [
     imageAlt: "Portrait of Tan Feiyang, Business & Finance at ArtAbility",
     titles: [] as string[],
   },
-] as const;
+] as const satisfies readonly {
+  id: string;
+  name: string;
+  role: string;
+  focus: string;
+  bio: string;
+  imageSrc: string | null;
+  imageAlt: string;
+  titles: readonly string[];
+}[];

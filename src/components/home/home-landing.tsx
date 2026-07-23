@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Bus, Sparkles, Store, Upload } from "lucide-react";
 import { siteConfig } from "@/data/site";
@@ -58,10 +59,17 @@ export default function HomeLanding() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="relative z-10 min-h-[280px] sm:min-h-[360px] lg:min-h-[440px]"
-            aria-hidden
           >
-            <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-gradient-to-br from-sunflower via-coral/80 to-violet shadow-2xl shadow-violet/20">
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-violet-deep/60 to-transparent p-6 pt-16">
+            <div className="absolute inset-0 overflow-hidden rounded-[2rem] shadow-2xl shadow-violet/20">
+              <Image
+                src="/home/roving-art-truck-hero.jpg"
+                alt="Family coloring with a child beside the Roving Art Truck outdoor gallery"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-violet-deep/70 to-transparent p-6 pt-16">
                 <p className="font-display text-lg font-bold text-white">
                   {siteConfig.busName}: {siteConfig.busTagline}
                 </p>
